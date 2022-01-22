@@ -16,11 +16,12 @@ public class AbstractHandler implements Handler {
     }
 
     /*
-    * @request: the business logic to deal with
+    * @request: the business logic to deal with,
+    *           The children will be able to call this default method
     * */
     @Override
     public String handle(String request) {
-        if (request == "USER_LOGGED") {
+        if (request.equals("USER_LOGGED")) {
             return "Logged! Processing...";
         }
         return "You must be logged";
