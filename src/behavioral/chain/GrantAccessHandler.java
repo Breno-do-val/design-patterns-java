@@ -1,9 +1,9 @@
 package behavioral.chain;
 
-public class AdminUserHandler extends AbstractHandler {
+public class GrantAccessHandler extends AbstractHandler {
     @Override
     public boolean handle(UserInfo userInfo) {
-        if (userInfo.getRole() == "ADMIN") {
+        if (userInfo.getPasswordValidated()) {
             return checkNext(userInfo);
         }
         return false;
