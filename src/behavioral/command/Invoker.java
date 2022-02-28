@@ -1,19 +1,19 @@
 package behavioral.command;
 
 public class Invoker {
-    private Command onStart;
-    private Command onFinish;
+    private Command turnOnCommand;
+    private Command turnOffCommand;
 
-    public void setOnStart(Command command) {
-        this.onStart = command;
+    public Invoker(Command turnOn, Command turnOff) {
+        this.turnOnCommand = turnOn;
+        this.turnOffCommand = turnOff;
     }
 
-    public void setOnFinish(Command command) {
-        this.onFinish = command;
+    public void turnOn() {
+        this.turnOnCommand.execute();
     }
 
-    public void doSomethingImportant() {
-        this.onStart.execute();
-        this.onFinish.execute();
+    public void turnOff() {
+        this.turnOffCommand.execute();
     }
 }
