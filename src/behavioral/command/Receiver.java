@@ -1,11 +1,19 @@
 package behavioral.command;
 
 public class Receiver {
-    public void doSomething(String a) {
-        System.out.println(String.format("Receiver: working on (%s)", a));
+    private boolean light;
+
+    public void turnOn() {
+        this.light = true;
+        System.out.println("Receiver: The light is On");
     }
 
-    public void doSomethingElse(String b) {
-        System.out.println(String.format("Receiver: working on (%s)", b));
+    public void turnOff() {
+        this.light = false;
+        System.out.println("Receiver: The light is Off");
+    }
+
+    public boolean isLightOn() {
+        return light;
     }
 }
