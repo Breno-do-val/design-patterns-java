@@ -20,4 +20,4 @@ to one of the business logic objects.
 The Receiver is the one who does the hard work and the client creates and configures concrete command objects.
 
 ### UML Class diagram
-!(classDiagram)[behavioral/command/class-diagram-command.png]
+!(classDiagram)[src/behavioral/command/class-diagram-command.png?raw=true]
