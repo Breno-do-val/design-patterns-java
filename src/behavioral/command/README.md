@@ -18,3 +18,6 @@ Concrete Command implement various kinds of requests. It is not supposed to perf
 to one of the business logic objects.
 
 The Receiver is the one who does the hard work and the client creates and configures concrete command objects.
+
+### UML Class diagram
+!(classDiagram)[src/behavioral/command/class-diagram-command]
