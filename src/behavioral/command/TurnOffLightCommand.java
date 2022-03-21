@@ -1,19 +1,19 @@
 package behavioral.command;
 
-public class TurnOnCommand implements Command {
-    private Receiver receiver;
+public class TurnOffLightCommand implements Command{
+    private SmartLightBulb receiver;
 
-    public TurnOnCommand(Receiver receiver) {
+    public TurnOffLightCommand(SmartLightBulb receiver) {
         this.receiver = receiver;
     }
 
     @Override public void execute() {
-        this.receiver.turnOn();
+        this.receiver.turnOffLight();
         System.out.println("The light is: " + receiver.isLightOn());
     }
 
     @Override public void unexecute() {
-        this.receiver.turnOff();
+        this.receiver.turnOnLight();
         System.out.println("The light is: " + receiver.isLightOn());
     }
 }

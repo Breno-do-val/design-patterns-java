@@ -2,11 +2,17 @@ package behavioral.command;
 
 public class ClientCode {
     public static void main(String[] args) {
-        Receiver receiver = new Receiver();
+        SmartLightBulb receiver = new SmartLightBulb();
 
-        Invoker invoker = new Invoker(new TurnOnCommand(receiver), new TurnOffCommand(receiver));
+        Invoker wifiInvoker = new Invoker(new TurnOnWifiCommand(receiver), new TurnOffWifiCommand(receiver));
+        Invoker lightInvoker = new Invoker(new TurnOnLightCommand(receiver), new TurnOffLightCommand(receiver));
 
-        invoker.turnOn();
-        invoker.turnOff();
+        // Invoker for wi-fi manipulation
+        wifiInvoker.turnOn();
+        wifiInvoker.turnOff();
+
+        // Invoker for light manipulation
+        lightInvoker.turnOn();
+        lightInvoker.turnOff();
     }
 }
