@@ -17,3 +17,5 @@ can be broadly used and be more flexible.
 3. Add a field to the adapter class to store a reference to the service object.
 4. Implement all methods of the client interface in the adapter class.
 5. Clients should use the adapter via the client interface.
+
+## Class Diagram
