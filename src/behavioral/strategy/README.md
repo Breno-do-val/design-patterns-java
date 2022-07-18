@@ -25,3 +25,4 @@ algorithm.
 5 - The client creates a specific strategy object and passes it to the context.
 
 ### UML Class diagram
+![strategy-design_pattern](https://user-images.githubusercontent.com/50167034/179615304-6901a374-200e-4461-8db8-c4610e02b11a.png)
