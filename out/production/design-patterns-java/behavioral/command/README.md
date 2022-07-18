@@ -12,9 +12,13 @@ this status.
 ## Solution provided
 There should be a class for initiating requests where it triggers the Command.
 
-The Command interface declares just a single method for executing the Command.
+The Command interface declares methods for executing and un-executing the Command.
 
 Concrete Command implement various kinds of requests. It is not supposed to perform the work but instead pass the call \
 to one of the business logic objects.
 
 The Receiver is the one who does the hard work and the client creates and configures concrete command objects.
+
+### UML Class diagram
+![class-diagram-command](https://user-images.githubusercontent.com/50167034/159370163-5dbc9df7-5b65-411f-a93e-59b1cb4079bd.png)
+
